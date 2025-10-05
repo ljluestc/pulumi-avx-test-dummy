@@ -1,0 +1,11 @@
+# Task ID: task-033
+# Title: Phase 5: Create Go Example Programs
+# Status: pending
+# Dependencies: task-028 (Not found)
+# Priority: high
+# Description: Write example Pulumi programs in Go for key resources (account, gateway, vpc, firenet, site2cloud)
+# Details:
+
+
+# Test Strategy:
+

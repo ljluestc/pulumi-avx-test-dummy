@@ -1,0 +1,11 @@
+# Task ID: task-032
+# Title: Phase 5: Generate Java SDK
+# Status: pending
+# Dependencies: task-027 (Not found)
+# Priority: high
+# Description: Use pulumi package gen-sdk to generate Java SDK
+# Details:
+
+
+# Test Strategy:
+

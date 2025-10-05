@@ -1,0 +1,3 @@
+name: aviatrix-csharp-demo
+runtime: dotnet
+description: A Pulumi program demonstrating Aviatrix provider in C#

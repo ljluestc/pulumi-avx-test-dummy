@@ -1,0 +1,11 @@
+# Task ID: task-004
+# Title: Phase 1: Create Makefile Build System
+# Status: pending
+# Dependencies: task-001 (Not found)
+# Priority: high
+# Description: Implement Makefile with targets: build, install, generate, test, clean, lint, fmt
+# Details:
+
+
+# Test Strategy:
+

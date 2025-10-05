@@ -1,0 +1,11 @@
+# Task ID: task-050
+# Title: Phase 8: Build Multi-Platform Binaries
+# Status: pending
+# Dependencies: task-049 (Not found)
+# Priority: critical
+# Description: Use goreleaser to build binaries for Linux, macOS, Windows (amd64 and arm64)
+# Details:
+
+
+# Test Strategy:
+

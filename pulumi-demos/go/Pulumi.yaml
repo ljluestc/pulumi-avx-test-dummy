@@ -1,0 +1,3 @@
+name: aviatrix-go-demo
+runtime: go
+description: A Pulumi program demonstrating Aviatrix provider in Go

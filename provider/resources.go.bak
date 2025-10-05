@@ -1,0 +1,632 @@
+package aviatrix
+
+import (
+	"github.com/AviatrixSystems/terraform-provider-aviatrix/v3/aviatrix"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
+	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
+	"github.com/pulumi/pulumi-aviatrix/provider/pkg/version"
+)
+
+const (
+	mainPkg = "aviatrix"
+	mainMod = "index" // the aviatrix module
+)
+
+func Provider() tfbridge.ProviderInfo {
+	p := shimv2.NewProvider(aviatrix.Provider())
+
+	prov := tfbridge.ProviderInfo{
+		P:    p,
+		Name: "aviatrix",
+		DisplayName: "Aviatrix",
+		Publisher: "Pulumi",
+		LogoURL: "https://raw.githubusercontent.com/AviatrixSystems/terraform-provider-aviatrix/master/docs/aviatrix_logo.png",
+		PluginDownloadURL: "github://api.github.com/pulumi/pulumi-aviatrix",
+		Description: "A Pulumi package for creating and managing Aviatrix cloud resources.",
+		Keywords: []string{
+			"pulumi",
+			"aviatrix",
+			"category/cloud",
+			"category/networking",
+			"category/security",
+		},
+		License: "Apache-2.0",
+		Homepage: "https://www.aviatrix.com",
+		Repository: "https://github.com/pulumi/pulumi-aviatrix",
+		GitHubOrg: "AviatrixSystems",
+		Config: map[string]*tfbridge.SchemaInfo{
+			"controller_ip": {
+				Type: "string",
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"AVIATRIX_CONTROLLER_IP"},
+				},
+			},
+			"username": {
+				Type: "string",
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"AVIATRIX_USERNAME"},
+				},
+			},
+			"password": {
+				Type: "string",
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"AVIATRIX_PASSWORD"},
+				},
+			},
+			"skip_version_validation": {
+				Type: "boolean",
+			},
+			"verify_ssl_certificate": {
+				Type: "boolean",
+			},
+			"path_to_ca_certificate": {
+				Type: "string",
+			},
+		},
+		Resources: map[string]*tfbridge.ResourceInfo{
+			// Core Resources
+			"aviatrix_account": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Account"),
+			},
+			"aviatrix_account_user": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AccountUser"),
+			},
+			"aviatrix_gateway": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Gateway"),
+			},
+			"aviatrix_spoke_gateway": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SpokeGateway"),
+			},
+			"aviatrix_spoke_ha_gateway": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SpokeHaGateway"),
+			},
+			"aviatrix_transit_gateway": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "TransitGateway"),
+			},
+			"aviatrix_vpc": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Vpc"),
+			},
+
+			// AWS Resources
+			"aviatrix_aws_peer": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsPeer"),
+			},
+			"aviatrix_aws_guard_duty": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsGuardDuty"),
+			},
+			"aviatrix_aws_tgw": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgw"),
+			},
+			"aviatrix_aws_tgw_connect": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwConnect"),
+			},
+			"aviatrix_aws_tgw_connect_peer": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwConnectPeer"),
+			},
+			"aviatrix_aws_tgw_directconnect": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwDirectConnect"),
+			},
+			"aviatrix_aws_tgw_intra_domain_inspection": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwIntraDomainInspection"),
+			},
+			"aviatrix_aws_tgw_network_domain": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwNetworkDomain"),
+			},
+			"aviatrix_aws_tgw_peering": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwPeering"),
+			},
+			"aviatrix_aws_tgw_peering_domain_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwPeeringDomainConn"),
+			},
+			"aviatrix_aws_tgw_transit_gateway_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwTransitGatewayAttachment"),
+			},
+			"aviatrix_aws_tgw_vpc_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwVpcAttachment"),
+			},
+			"aviatrix_aws_tgw_vpn_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AwsTgwVpnConn"),
+			},
+
+			// Azure Resources
+			"aviatrix_azure_peer": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AzurePeer"),
+			},
+			"aviatrix_azure_spoke_native_peering": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AzureSpokeNativePeering"),
+			},
+			"aviatrix_azure_vng_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "AzureVngConn"),
+			},
+
+			// Edge Resources
+			"aviatrix_edge_csp": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeCsp"),
+			},
+			"aviatrix_edge_csp_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeCspHa"),
+			},
+			"aviatrix_edge_equinix": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeEquinix"),
+			},
+			"aviatrix_edge_equinix_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeEquinixHa"),
+			},
+			"aviatrix_edge_megaport": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeMegaport"),
+			},
+			"aviatrix_edge_megaport_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeMegaportHa"),
+			},
+			"aviatrix_edge_gateway_selfmanaged": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeGatewaySelfmanaged"),
+			},
+			"aviatrix_edge_gateway_selfmanaged_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeGatewaySelfmanagedHa"),
+			},
+			"aviatrix_edge_neo": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeNeo"),
+			},
+			"aviatrix_edge_neo_device_onboarding": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeNeoDeviceOnboarding"),
+			},
+			"aviatrix_edge_neo_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeNeoHa"),
+			},
+			"aviatrix_edge_platform": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgePlatform"),
+			},
+			"aviatrix_edge_platform_device_onboarding": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgePlatformDeviceOnboarding"),
+			},
+			"aviatrix_edge_platform_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgePlatformHa"),
+			},
+			"aviatrix_edge_proxy_profile": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeProxyProfile"),
+			},
+			"aviatrix_edge_spoke": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeSpoke"),
+			},
+			"aviatrix_edge_spoke_external_device_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeSpokeExternalDeviceConn"),
+			},
+			"aviatrix_edge_spoke_transit_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeSpokeTransitAttachment"),
+			},
+			"aviatrix_edge_vm_selfmanaged": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeVmSelfmanaged"),
+			},
+			"aviatrix_edge_vm_selfmanaged_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeVmSelfmanagedHa"),
+			},
+			"aviatrix_edge_zededa": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeZededa"),
+			},
+			"aviatrix_edge_zededa_ha": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "EdgeZededaHa"),
+			},
+
+			// Firewall Resources
+			"aviatrix_firenet": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FireNet"),
+			},
+			"aviatrix_firewall": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Firewall"),
+			},
+			"aviatrix_firewall_instance": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FirewallInstance"),
+			},
+			"aviatrix_firewall_instance_association": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FirewallInstanceAssociation"),
+			},
+			"aviatrix_firewall_management_access": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FirewallManagementAccess"),
+			},
+			"aviatrix_firewall_policy": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FirewallPolicy"),
+			},
+			"aviatrix_firewall_tag": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FirewallTag"),
+			},
+
+			// FQDN Resources
+			"aviatrix_fqdn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Fqdn"),
+			},
+			"aviatrix_fqdn_global_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FqdnGlobalConfig"),
+			},
+			"aviatrix_fqdn_pass_through": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FqdnPassThrough"),
+			},
+			"aviatrix_fqdn_tag_rule": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FqdnTagRule"),
+			},
+
+			// Gateway Resources
+			"aviatrix_gateway_certificate_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "GatewayCertificateConfig"),
+			},
+			"aviatrix_gateway_dnat": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "GatewayDNat"),
+			},
+			"aviatrix_gateway_snat": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "GatewaySNat"),
+			},
+
+			// VPN Resources
+			"aviatrix_geo_vpn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "GeoVpn"),
+			},
+			"aviatrix_site2cloud": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Site2Cloud"),
+			},
+			"aviatrix_site2cloud_ca_cert_tag": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Site2CloudCaCertTag"),
+			},
+			"aviatrix_vpn_cert_download": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "VpnCertDownload"),
+			},
+			"aviatrix_vpn_profile": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "VpnProfile"),
+			},
+			"aviatrix_vpn_user": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "VpnUser"),
+			},
+			"aviatrix_vpn_user_accelerator": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "VpnUserAccelerator"),
+			},
+
+			// Transit Resources
+			"aviatrix_transit_gateway_peering": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "TransitGatewayPeering"),
+			},
+			"aviatrix_transit_firenet_policy": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "TransitFireNetPolicy"),
+			},
+			"aviatrix_trans_peer": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "TransPeer"),
+			},
+			"aviatrix_tunnel": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Tunnel"),
+			},
+
+			// Spoke Resources
+			"aviatrix_spoke_gateway_subnet_group": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SpokeGatewaySubnetGroup"),
+			},
+			"aviatrix_spoke_external_device_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SpokeExternalDeviceConn"),
+			},
+			"aviatrix_spoke_transit_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SpokeTransitAttachment"),
+			},
+
+			// Transit External Device Resources
+			"aviatrix_transit_external_device_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "TransitExternalDeviceConn"),
+			},
+
+			// VGW Resources
+			"aviatrix_vgw_conn": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "VgwConn"),
+			},
+
+			// Controller Resources
+			"aviatrix_controller_access_allow_list_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerAccessAllowListConfig"),
+			},
+			"aviatrix_controller_bgp_max_as_limit_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerBgpMaxAsLimitConfig"),
+			},
+			"aviatrix_controller_bgp_communities_global_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerBgpCommunitiesGlobalConfig"),
+			},
+			"aviatrix_controller_bgp_communities_auto_cloud_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerBgpCommunitiesAutoCloudConfig"),
+			},
+			"aviatrix_controller_cert_domain_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerCertDomainConfig"),
+			},
+			"aviatrix_controller_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerConfig"),
+			},
+			"aviatrix_controller_email_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerEmailConfig"),
+			},
+			"aviatrix_controller_email_exception_notification_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerEmailExceptionNotificationConfig"),
+			},
+			"aviatrix_controller_gateway_keepalive_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerGatewayKeepaliveConfig"),
+			},
+			"aviatrix_controller_private_mode_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerPrivateModeConfig"),
+			},
+			"aviatrix_controller_private_oob": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerPrivateOob"),
+			},
+			"aviatrix_controller_security_group_management_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ControllerSecurityGroupManagementConfig"),
+			},
+
+			// Copilot Resources
+			"aviatrix_copilot_association": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "CopilotAssociation"),
+			},
+			"aviatrix_copilot_fault_tolerant_deployment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "CopilotFaultTolerantDeployment"),
+			},
+			"aviatrix_copilot_security_group_management_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "CopilotSecurityGroupManagementConfig"),
+			},
+			"aviatrix_copilot_simple_deployment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "CopilotSimpleDeployment"),
+			},
+
+			// DCF Resources
+			"aviatrix_dcf_mwp_policy_block": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DcfMwpPolicyBlock"),
+			},
+			"aviatrix_dcf_mwp_policy_list": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DcfMwpPolicyList"),
+			},
+
+			// Device Resources
+			"aviatrix_device_interface_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DeviceInterfaceConfig"),
+			},
+
+			// Distributed Firewalling Resources
+			"aviatrix_distributed_firewalling_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingConfig"),
+			},
+			"aviatrix_distributed_firewalling_intra_vpc": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingIntraVpc"),
+			},
+			"aviatrix_distributed_firewalling_origin_cert_enforcement_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingOriginCertEnforcementConfig"),
+			},
+			"aviatrix_distributed_firewalling_policy_list": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingPolicyList"),
+			},
+			"aviatrix_distributed_firewalling_default_action_rule": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingDefaultActionRule"),
+			},
+			"aviatrix_distributed_firewalling_deployment_policy": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingDeploymentPolicy"),
+			},
+			"aviatrix_distributed_firewalling_proxy_ca_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DistributedFirewallingProxyCaConfig"),
+			},
+
+			// Global VPC Resources
+			"aviatrix_global_vpc_excluded_instance": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "GlobalVpcExcludedInstance"),
+			},
+			"aviatrix_global_vpc_tagging_settings": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "GlobalVpcTaggingSettings"),
+			},
+
+			// Kubernetes Resources
+			"aviatrix_kubernetes_cluster": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "KubernetesCluster"),
+			},
+
+			// Link Hierarchy Resources
+			"aviatrix_link_hierarchy": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "LinkHierarchy"),
+			},
+
+			// Logging Resources
+			"aviatrix_cloudwatch_agent": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "CloudwatchAgent"),
+			},
+			"aviatrix_datadog_agent": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "DatadogAgent"),
+			},
+			"aviatrix_filebeat_forwarder": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "FilebeatForwarder"),
+			},
+			"aviatrix_netflow_agent": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "NetflowAgent"),
+			},
+			"aviatrix_remote_syslog": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RemoteSyslog"),
+			},
+			"aviatrix_splunk_logging": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SplunkLogging"),
+			},
+			"aviatrix_sumologic_forwarder": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SumologicForwarder"),
+			},
+
+			// Monitoring Resources
+			"aviatrix_periodic_ping": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "PeriodicPing"),
+			},
+
+			// Private Mode Resources
+			"aviatrix_private_mode_lb": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "PrivateModeLb"),
+			},
+			"aviatrix_private_mode_multicloud_endpoint": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "PrivateModeMulticloudEndpoint"),
+			},
+
+			// Proxy Resources
+			"aviatrix_proxy_config": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "ProxyConfig"),
+			},
+
+			// QoS Resources
+			"aviatrix_qos_class": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "QosClass"),
+			},
+			"aviatrix_qos_policy_list": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "QosPolicyList"),
+			},
+
+			// RBAC Resources
+			"aviatrix_rbac_group": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RbacGroup"),
+			},
+			"aviatrix_rbac_group_access_account_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RbacGroupAccessAccountAttachment"),
+			},
+			"aviatrix_rbac_group_access_account_membership": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RbacGroupAccessAccountMembership"),
+			},
+			"aviatrix_rbac_group_permission_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RbacGroupPermissionAttachment"),
+			},
+			"aviatrix_rbac_group_user_attachment": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RbacGroupUserAttachment"),
+			},
+			"aviatrix_rbac_group_user_membership": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "RbacGroupUserMembership"),
+			},
+
+			// SAML Resources
+			"aviatrix_saml_endpoint": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SamlEndpoint"),
+			},
+
+			// Segmentation Resources
+			"aviatrix_segmentation_network_domain": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SegmentationNetworkDomain"),
+			},
+			"aviatrix_segmentation_network_domain_association": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SegmentationNetworkDomainAssociation"),
+			},
+			"aviatrix_segmentation_network_domain_connection_policy": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SegmentationNetworkDomainConnectionPolicy"),
+			},
+
+			// SLA Resources
+			"aviatrix_sla_class": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SlaClass"),
+			},
+
+			// Smart Group Resources
+			"aviatrix_smart_group": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "SmartGroup"),
+			},
+
+			// Traffic Classifier Resources
+			"aviatrix_traffic_classifier": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "TrafficClassifier"),
+			},
+
+			// Centralized Transit FireNet Resources
+			"aviatrix_centralized_transit_firenet": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "CentralizedTransitFireNet"),
+			},
+
+			// Web Group Resources
+			"aviatrix_web_group": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "WebGroup"),
+			},
+		},
+		DataSources: map[string]*tfbridge.DataSourceInfo{
+			"aviatrix_account": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getAccount"),
+			},
+			"aviatrix_caller_identity": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getCallerIdentity"),
+			},
+			"aviatrix_controller_metadata": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getControllerMetadata"),
+			},
+			"aviatrix_web_group": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getWebGroup"),
+			},
+			"aviatrix_dcf_mwp_attachment_point": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getDcfMwpAttachmentPoint"),
+			},
+			"aviatrix_device_interfaces": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getDeviceInterfaces"),
+			},
+			"aviatrix_edge_gateway_wan_interface_discovery": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getEdgeGatewayWanInterfaceDiscovery"),
+			},
+			"aviatrix_firenet": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getFireNet"),
+			},
+			"aviatrix_firenet_firewall_manager": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getFireNetFirewallManager"),
+			},
+			"aviatrix_firenet_vendor_integration": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getFireNetVendorIntegration"),
+			},
+			"aviatrix_gateway": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getGateway"),
+			},
+			"aviatrix_gateway_image": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getGatewayImage"),
+			},
+			"aviatrix_network_domains": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getNetworkDomains"),
+			},
+			"aviatrix_smart_groups": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSmartGroups"),
+			},
+			"aviatrix_spoke_gateway": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSpokeGateway"),
+			},
+			"aviatrix_spoke_gateways": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSpokeGateways"),
+			},
+			"aviatrix_spoke_gateway_inspection_subnets": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSpokeGatewayInspectionSubnets"),
+			},
+			"aviatrix_transit_gateway": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getTransitGateway"),
+			},
+			"aviatrix_transit_gateways": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getTransitGateways"),
+			},
+			"aviatrix_vpc": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getVpc"),
+			},
+			"aviatrix_vpc_tracker": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getVpcTracker"),
+			},
+			"aviatrix_firewall": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getFirewall"),
+			},
+			"aviatrix_firewall_instance_images": {
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getFirewallInstanceImages"),
+			},
+		},
+		JavaScript: &tfbridge.JavaScriptInfo{
+			PackageName: "@pulumi/aviatrix",
+			Dependencies: map[string]string{
+				"@pulumi/pulumi": "^3.0.0",
+			},
+			DevDependencies: map[string]string{
+				"@types/node": "^10.0.0",
+				"typescript": "^4.3.5",
+			},
+		},
+		Python: &tfbridge.PythonInfo{
+			PackageName: "pulumi_aviatrix",
+			Requires: map[string]string{
+				"pulumi": ">=3.0.0,<4.0.0",
+			},
+		},
+		CSharp: &tfbridge.CSharpInfo{
+			PackageReferences: map[string]string{
+				"Pulumi": "3.*",
+			},
+		},
+		Java: &tfbridge.JavaInfo{
+			BasePackage: "com.pulumi.aviatrix",
+		},
+	}
+
+	prov.SetAutonaming(255, "-")
+
+	return prov
+}

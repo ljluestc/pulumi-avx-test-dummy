@@ -1,0 +1,11 @@
+# Task ID: task-030
+# Title: Phase 5: Generate TypeScript SDK
+# Status: pending
+# Dependencies: task-027 (Not found)
+# Priority: critical
+# Description: Use pulumi package gen-sdk to generate TypeScript/Node.js SDK
+# Details:
+
+
+# Test Strategy:
+

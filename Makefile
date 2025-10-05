@@ -1,7 +1,7 @@
-PROJECT_NAME := xyz Package
+PROJECT_NAME := aviatrix Package
 
 SHELL            := /bin/bash
-PACK             := xyz
+PACK             := aviatrix
 ORG              := pulumi
 PROJECT          := github.com/${ORG}/pulumi-${PACK}
 NODE_MODULE_NAME := @pulumi/${PACK}

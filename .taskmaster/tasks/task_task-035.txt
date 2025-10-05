@@ -1,0 +1,11 @@
+# Task ID: task-035
+# Title: Phase 5: Create TypeScript Example Programs
+# Status: pending
+# Dependencies: task-030 (Not found)
+# Priority: high
+# Description: Write example Pulumi programs in TypeScript for key resources
+# Details:
+
+
+# Test Strategy:
+

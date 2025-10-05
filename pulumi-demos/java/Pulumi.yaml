@@ -1,0 +1,3 @@
+name: aviatrix-java-demo
+runtime: java
+description: A Pulumi program demonstrating Aviatrix provider in Java

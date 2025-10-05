@@ -1,0 +1,11 @@
+# Task ID: task-001
+# Title: Phase 1: Project Scaffolding - Directory Structure
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Create complete directory structure for pulumi-aviatrix project including provider, sdk, examples, scripts, and tests folders
+# Details:
+
+
+# Test Strategy:
+

@@ -1,0 +1,1229 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "task-001",
+        "title": "Phase 1: Project Scaffolding - Directory Structure",
+        "description": "Create complete directory structure for pulumi-aviatrix project including provider, sdk, examples, scripts, and tests folders",
+        "status": "done",
+        "priority": "high",
+        "tags": [
+          "setup",
+          "phase1"
+        ],
+        "dependencies": [],
+        "estimated_hours": 2,
+        "commands": [
+          "mkdir -p pulumi-aviatrix/provider/cmd/pulumi-resource-aviatrix",
+          "mkdir -p pulumi-aviatrix/provider/pkg/provider/{resources,datasources}",
+          "mkdir -p pulumi-aviatrix/provider/pkg/version",
+          "mkdir -p pulumi-aviatrix/sdk/{go,python,nodejs,dotnet,java}",
+          "mkdir -p pulumi-aviatrix/examples/{go,python,typescript,csharp,java}",
+          "mkdir -p pulumi-aviatrix/scripts",
+          "mkdir -p pulumi-aviatrix/tests"
+        ],
+        "updatedAt": "2025-10-05T20:16:01.149Z",
+        "subtasks": []
+      },
+      {
+        "id": "task-002",
+        "title": "Phase 1: Initialize Go Module and Dependencies",
+        "description": "Create go.mod with Pulumi SDK v3, Pulumi Terraform Bridge v3, and import existing Terraform provider",
+        "status": "in-progress",
+        "priority": "high",
+        "tags": [
+          "setup",
+          "phase1",
+          "golang"
+        ],
+        "dependencies": [
+          "task-001"
+        ],
+        "estimated_hours": 2,
+        "deliverables": [
+          "pulumi-aviatrix/provider/go.mod",
+          "pulumi-aviatrix/provider/go.sum"
+        ],
+        "subtasks": [],
+        "updatedAt": "2025-10-05T21:41:28.973Z"
+      },
+      {
+        "id": "task-003",
+        "title": "Phase 1: Create Version Package",
+        "description": "Implement version package with initial version v1.0.0",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "setup",
+          "phase1"
+        ],
+        "dependencies": [
+          "task-001"
+        ],
+        "estimated_hours": 1,
+        "deliverables": [
+          "pulumi-aviatrix/provider/pkg/version/version.go"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-004",
+        "title": "Phase 1: Create Makefile Build System",
+        "description": "Implement Makefile with targets: build, install, generate, test, clean, lint, fmt",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "setup",
+          "phase1",
+          "build"
+        ],
+        "dependencies": [
+          "task-001"
+        ],
+        "estimated_hours": 3,
+        "deliverables": [
+          "pulumi-aviatrix/Makefile"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-005",
+        "title": "Phase 1: Setup GitHub Actions CI/CD",
+        "description": "Create GitHub Actions workflows for builds, tests, and releases (multi-platform: Linux, macOS, Windows)",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "setup",
+          "phase1",
+          "cicd"
+        ],
+        "dependencies": [
+          "task-004"
+        ],
+        "estimated_hours": 4,
+        "deliverables": [
+          ".github/workflows/build.yml",
+          ".github/workflows/test.yml",
+          ".github/workflows/release.yml"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-006",
+        "title": "Phase 1: Create goreleaser Configuration",
+        "description": "Setup goreleaser for automated multi-platform binary releases",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "setup",
+          "phase1",
+          "release"
+        ],
+        "dependencies": [
+          "task-004"
+        ],
+        "estimated_hours": 2,
+        "deliverables": [
+          ".goreleaser.yml"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-007",
+        "title": "Phase 2: Implement Provider Bridge Main Entry Point",
+        "description": "Create main.go with tfbridge.Main() initialization and provider metadata configuration",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "core",
+          "phase2",
+          "provider"
+        ],
+        "dependencies": [
+          "task-002"
+        ],
+        "estimated_hours": 4,
+        "deliverables": [
+          "pulumi-aviatrix/provider/cmd/pulumi-resource-aviatrix/main.go"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-008",
+        "title": "Phase 2: Implement Provider Configuration Schema",
+        "description": "Map Terraform provider config to Pulumi: ControllerIP, Username, Password, SSL settings, IgnoreTags",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "core",
+          "phase2",
+          "config"
+        ],
+        "dependencies": [
+          "task-007"
+        ],
+        "estimated_hours": 4,
+        "deliverables": [
+          "pulumi-aviatrix/provider/pkg/provider/config.go"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-009",
+        "title": "Phase 2: Create Provider Info Structure",
+        "description": "Implement ProviderInfo with metadata for all languages (Go, Python, TypeScript, C#, Java)",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "core",
+          "phase2",
+          "provider"
+        ],
+        "dependencies": [
+          "task-008"
+        ],
+        "estimated_hours": 6,
+        "deliverables": [
+          "pulumi-aviatrix/provider/pkg/provider/provider.go"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-010",
+        "title": "Phase 2: Integrate goaviatrix SDK Client",
+        "description": "Wire up existing goaviatrix client with Pulumi provider context and error handling",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "core",
+          "phase2",
+          "sdk"
+        ],
+        "dependencies": [
+          "task-009"
+        ],
+        "estimated_hours": 3,
+        "deliverables": [
+          "pulumi-aviatrix/provider/pkg/provider/client.go"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-011",
+        "title": "Phase 3 Batch 1: Account Management Resources (9 resources)",
+        "description": "Implement: account, account_user, rbac_group, rbac_group_access_account_attachment, rbac_group_permission_attachment, rbac_group_user_attachment, remote_syslog, sumologic_forwarder, splunk_logging",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch1",
+          "accounts"
+        ],
+        "dependencies": [
+          "task-010"
+        ],
+        "estimated_hours": 18,
+        "acceptance_criteria": [
+          "All 9 resources have complete CRUD operations",
+          "Schema mappings validated",
+          "Import support implemented",
+          "Unit tests written and passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-012",
+        "title": "Phase 3 Batch 1: Basic VPC/VNet Resources (5 resources)",
+        "description": "Implement core VPC creation resources",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch1",
+          "networking"
+        ],
+        "dependencies": [
+          "task-010"
+        ],
+        "estimated_hours": 10,
+        "acceptance_criteria": [
+          "VPC/VNet creation working",
+          "All cloud providers supported",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-013",
+        "title": "Phase 3 Batch 1: Simple Gateway Resources (10 resources)",
+        "description": "Implement basic gateway resources (transit, spoke, HA configurations)",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch1",
+          "gateways"
+        ],
+        "dependencies": [
+          "task-012"
+        ],
+        "estimated_hours": 20,
+        "acceptance_criteria": [
+          "Gateway CRUD operations functional",
+          "HA configurations working",
+          "Integration tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-014",
+        "title": "Phase 3 Batch 2: AWS TGW Resources (15 resources)",
+        "description": "Implement AWS Transit Gateway management resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch2",
+          "aws"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 30,
+        "acceptance_criteria": [
+          "TGW creation and management working",
+          "Domain and attachment resources functional",
+          "Tests with real AWS TGW passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-015",
+        "title": "Phase 3 Batch 2: AWS Peering Resources (5 resources)",
+        "description": "Implement AWS VPC peering and related resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch2",
+          "aws"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 10,
+        "acceptance_criteria": [
+          "Peering CRUD operations working",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-016",
+        "title": "Phase 3 Batch 2: AWS-Specific Features (7 resources)",
+        "description": "Implement GuardDuty, Direct Connect, VPN connections",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch2",
+          "aws"
+        ],
+        "dependencies": [
+          "task-014"
+        ],
+        "estimated_hours": 14,
+        "acceptance_criteria": [
+          "All AWS-specific features working",
+          "Integration with AWS services validated"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-017",
+        "title": "Phase 3 Batch 3: Site2Cloud Resources (8 resources)",
+        "description": "Implement Site2Cloud VPN connection resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch3",
+          "networking"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 16,
+        "acceptance_criteria": [
+          "Site2Cloud connections working",
+          "Multiple cloud providers supported",
+          "Connection tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-018",
+        "title": "Phase 3 Batch 3: BGP Configuration Resources (10 resources)",
+        "description": "Implement BGP routing configuration resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch3",
+          "networking"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 20,
+        "acceptance_criteria": [
+          "BGP configuration CRUD working",
+          "Route advertisements functional",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-019",
+        "title": "Phase 3 Batch 3: Segmentation Resources (12 resources)",
+        "description": "Implement network segmentation and domain resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch3",
+          "networking"
+        ],
+        "dependencies": [
+          "task-017"
+        ],
+        "estimated_hours": 24,
+        "acceptance_criteria": [
+          "Segmentation policies working",
+          "Network domains functional",
+          "Integration tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-020",
+        "title": "Phase 3 Batch 4: FireNet Resources (10 resources)",
+        "description": "Implement FireNet firewall insertion resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch4",
+          "security"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 20,
+        "acceptance_criteria": [
+          "FireNet deployment working",
+          "Firewall instance management functional",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-021",
+        "title": "Phase 3 Batch 4: Distributed Firewalling Resources (8 resources)",
+        "description": "Implement distributed cloud firewall (DCF) resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch4",
+          "security"
+        ],
+        "dependencies": [
+          "task-020"
+        ],
+        "estimated_hours": 16,
+        "acceptance_criteria": [
+          "DCF policies working",
+          "Smart groups functional",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-022",
+        "title": "Phase 3 Batch 4: Security Policy Resources (10 resources)",
+        "description": "Implement FQDN filtering, web groups, security policies",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch4",
+          "security"
+        ],
+        "dependencies": [
+          "task-021"
+        ],
+        "estimated_hours": 20,
+        "acceptance_criteria": [
+          "Security policies functional",
+          "FQDN filtering working",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-023",
+        "title": "Phase 3 Batch 5: Controller Configuration Resources (26 resources)",
+        "description": "Implement controller settings: email, certificates, BGP settings, ACLs, security groups, logging, license",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch5",
+          "controller"
+        ],
+        "dependencies": [
+          "task-010"
+        ],
+        "estimated_hours": 52,
+        "acceptance_criteria": [
+          "All controller config resources working",
+          "Settings persisted correctly",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-024",
+        "title": "Phase 3 Batch 5: Edge Gateway Resources (8 resources)",
+        "description": "Implement edge gateways (Equinix, CloudN) and related resources",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch5",
+          "edge"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 16,
+        "acceptance_criteria": [
+          "Edge gateway deployment working",
+          "WAN interface discovery functional",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-025",
+        "title": "Phase 3 Batch 5: Azure Resources (8 resources)",
+        "description": "Implement Azure-specific resources: peering, VNet integration, Virtual Network Gateway connections",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch5",
+          "azure"
+        ],
+        "dependencies": [
+          "task-013"
+        ],
+        "estimated_hours": 16,
+        "acceptance_criteria": [
+          "Azure peering working",
+          "VNet integration functional",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-026",
+        "title": "Phase 3 Batch 5: Remaining Miscellaneous Resources (20 resources)",
+        "description": "Implement remaining uncategorized resources",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "resources",
+          "phase3",
+          "batch5",
+          "misc"
+        ],
+        "dependencies": [
+          "task-010"
+        ],
+        "estimated_hours": 40,
+        "acceptance_criteria": [
+          "All resources implemented",
+          "Total 148 resources complete",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-027",
+        "title": "Phase 4: Implement All Data Sources (23 total)",
+        "description": "Implement all 23 data sources: account, caller_identity, controller_metadata, firenet, gateway, vpc, etc.",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "datasources",
+          "phase4"
+        ],
+        "dependencies": [
+          "task-026"
+        ],
+        "estimated_hours": 30,
+        "acceptance_criteria": [
+          "All 23 data sources implemented",
+          "Read operations functional",
+          "Output typing correct",
+          "Tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-028",
+        "title": "Phase 5: Generate Go SDK",
+        "description": "Use pulumi package gen-sdk to generate Go SDK",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "sdk",
+          "phase5",
+          "golang"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 4,
+        "commands": [
+          "cd provider && pulumi package gen-sdk --language go ../bin/pulumi-resource-aviatrix"
+        ],
+        "acceptance_criteria": [
+          "Go SDK generated successfully",
+          "No compilation errors",
+          "Type definitions correct"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-029",
+        "title": "Phase 5: Generate Python SDK",
+        "description": "Use pulumi package gen-sdk to generate Python SDK",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "sdk",
+          "phase5",
+          "python"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 4,
+        "commands": [
+          "cd provider && pulumi package gen-sdk --language python ../bin/pulumi-resource-aviatrix"
+        ],
+        "acceptance_criteria": [
+          "Python SDK generated successfully",
+          "setup.py created",
+          "Type hints present"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-030",
+        "title": "Phase 5: Generate TypeScript SDK",
+        "description": "Use pulumi package gen-sdk to generate TypeScript/Node.js SDK",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "sdk",
+          "phase5",
+          "typescript"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 4,
+        "commands": [
+          "cd provider && pulumi package gen-sdk --language nodejs ../bin/pulumi-resource-aviatrix"
+        ],
+        "acceptance_criteria": [
+          "TypeScript SDK generated successfully",
+          "package.json created",
+          "Type definitions (.d.ts) present"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-031",
+        "title": "Phase 5: Generate C# SDK",
+        "description": "Use pulumi package gen-sdk to generate C#/.NET SDK",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "sdk",
+          "phase5",
+          "csharp"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 4,
+        "commands": [
+          "cd provider && pulumi package gen-sdk --language dotnet ../bin/pulumi-resource-aviatrix"
+        ],
+        "acceptance_criteria": [
+          "C# SDK generated successfully",
+          ".csproj file created",
+          "Compiles without errors"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-032",
+        "title": "Phase 5: Generate Java SDK",
+        "description": "Use pulumi package gen-sdk to generate Java SDK",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "sdk",
+          "phase5",
+          "java"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 4,
+        "commands": [
+          "cd provider && pulumi package gen-sdk --language java ../bin/pulumi-resource-aviatrix"
+        ],
+        "acceptance_criteria": [
+          "Java SDK generated successfully",
+          "pom.xml created",
+          "Compiles without errors"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-033",
+        "title": "Phase 5: Create Go Example Programs",
+        "description": "Write example Pulumi programs in Go for key resources (account, gateway, vpc, firenet, site2cloud)",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "examples",
+          "phase5",
+          "golang"
+        ],
+        "dependencies": [
+          "task-028"
+        ],
+        "estimated_hours": 8,
+        "deliverables": [
+          "examples/go/basic-account/",
+          "examples/go/transit-gateway/",
+          "examples/go/firenet/",
+          "examples/go/site2cloud/",
+          "examples/go/multi-cloud-transit/"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-034",
+        "title": "Phase 5: Create Python Example Programs",
+        "description": "Write example Pulumi programs in Python for key resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "examples",
+          "phase5",
+          "python"
+        ],
+        "dependencies": [
+          "task-029"
+        ],
+        "estimated_hours": 8,
+        "deliverables": [
+          "examples/python/basic-account/",
+          "examples/python/transit-gateway/",
+          "examples/python/firenet/",
+          "examples/python/site2cloud/",
+          "examples/python/multi-cloud-transit/"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-035",
+        "title": "Phase 5: Create TypeScript Example Programs",
+        "description": "Write example Pulumi programs in TypeScript for key resources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "examples",
+          "phase5",
+          "typescript"
+        ],
+        "dependencies": [
+          "task-030"
+        ],
+        "estimated_hours": 8,
+        "deliverables": [
+          "examples/typescript/basic-account/",
+          "examples/typescript/transit-gateway/",
+          "examples/typescript/firenet/",
+          "examples/typescript/site2cloud/",
+          "examples/typescript/multi-cloud-transit/"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-036",
+        "title": "Phase 5: Create C# Example Programs",
+        "description": "Write example Pulumi programs in C# for key resources",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "examples",
+          "phase5",
+          "csharp"
+        ],
+        "dependencies": [
+          "task-031"
+        ],
+        "estimated_hours": 8,
+        "deliverables": [
+          "examples/csharp/basic-account/",
+          "examples/csharp/transit-gateway/",
+          "examples/csharp/firenet/"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-037",
+        "title": "Phase 5: Create Java Example Programs",
+        "description": "Write example Pulumi programs in Java for key resources",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "examples",
+          "phase5",
+          "java"
+        ],
+        "dependencies": [
+          "task-032"
+        ],
+        "estimated_hours": 8,
+        "deliverables": [
+          "examples/java/basic-account/",
+          "examples/java/transit-gateway/",
+          "examples/java/firenet/"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-038",
+        "title": "Phase 6: Setup Integration Test Infrastructure",
+        "description": "Setup Aviatrix test controller and cloud provider accounts (AWS, Azure, GCP, OCI) for integration testing",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "testing",
+          "phase6",
+          "infrastructure"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 8,
+        "acceptance_criteria": [
+          "Test controller accessible",
+          "Cloud accounts configured",
+          "Test credentials secured"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-039",
+        "title": "Phase 6: Implement Unit Test Suite",
+        "description": "Write comprehensive unit tests for all 148 resources and 23 data sources (target >80% coverage)",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "testing",
+          "phase6",
+          "unit"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 40,
+        "acceptance_criteria": [
+          "Unit tests for all resources",
+          "Code coverage >80%",
+          "All tests passing"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-040",
+        "title": "Phase 6: Implement Integration Test Suite",
+        "description": "Write integration tests with real Aviatrix Controller for critical resources",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "testing",
+          "phase6",
+          "integration"
+        ],
+        "dependencies": [
+          "task-038",
+          "task-039"
+        ],
+        "estimated_hours": 30,
+        "acceptance_criteria": [
+          "Integration tests for critical resources",
+          "Real CRUD operations tested",
+          "Tests passing consistently"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-041",
+        "title": "Phase 6: Implement End-to-End Test Scenarios",
+        "description": "Create E2E tests for multi-resource stacks (transit network, firenet deployment, spoke-transit architecture)",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "testing",
+          "phase6",
+          "e2e"
+        ],
+        "dependencies": [
+          "task-040"
+        ],
+        "estimated_hours": 20,
+        "acceptance_criteria": [
+          "E2E scenarios working",
+          "Dependency management validated",
+          "Rollback scenarios tested"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-042",
+        "title": "Phase 6: Language SDK Testing",
+        "description": "Test example programs in all 5 languages (Go, Python, TypeScript, C#, Java)",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "testing",
+          "phase6",
+          "sdk"
+        ],
+        "dependencies": [
+          "task-033",
+          "task-034",
+          "task-035",
+          "task-036",
+          "task-037"
+        ],
+        "estimated_hours": 16,
+        "acceptance_criteria": [
+          "All examples run successfully",
+          "No runtime errors",
+          "Type safety validated"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-043",
+        "title": "Phase 7: Generate API Reference Documentation",
+        "description": "Auto-generate API reference docs for all resources and data sources",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "documentation",
+          "phase7"
+        ],
+        "dependencies": [
+          "task-027"
+        ],
+        "estimated_hours": 8,
+        "deliverables": [
+          "docs/api-reference/resources/",
+          "docs/api-reference/datasources/",
+          "docs/api-reference/config.md"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-044",
+        "title": "Phase 7: Write Getting Started Guide",
+        "description": "Create comprehensive getting started guide: installation, configuration, first deployment",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "documentation",
+          "phase7",
+          "guide"
+        ],
+        "dependencies": [
+          "task-043"
+        ],
+        "estimated_hours": 6,
+        "deliverables": [
+          "docs/getting-started.md"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-045",
+        "title": "Phase 7: Write Migration Guide from Terraform",
+        "description": "Create detailed migration guide: conversion steps, schema differences, state migration, common patterns",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "documentation",
+          "phase7",
+          "migration"
+        ],
+        "dependencies": [
+          "task-043"
+        ],
+        "estimated_hours": 10,
+        "deliverables": [
+          "docs/migration-from-terraform.md"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-046",
+        "title": "Phase 7: Create Troubleshooting Guide and FAQ",
+        "description": "Document common errors, solutions, debugging tips, and frequently asked questions",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "documentation",
+          "phase7"
+        ],
+        "dependencies": [
+          "task-042"
+        ],
+        "estimated_hours": 6,
+        "deliverables": [
+          "docs/troubleshooting.md",
+          "docs/faq.md"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-047",
+        "title": "Phase 7: Create Advanced Example Scenarios",
+        "description": "Write advanced examples: multi-cloud transit network, FireNet deployment, spoke-transit architecture, Site2Cloud VPN",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "documentation",
+          "phase7",
+          "examples"
+        ],
+        "dependencies": [
+          "task-033",
+          "task-034",
+          "task-035"
+        ],
+        "estimated_hours": 12,
+        "deliverables": [
+          "examples/advanced/multi-cloud-transit/",
+          "examples/advanced/firenet-deployment/",
+          "examples/advanced/spoke-transit-architecture/",
+          "examples/advanced/site2cloud-vpn/"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-048",
+        "title": "Phase 7: Create README and Contributing Guidelines",
+        "description": "Write comprehensive README.md and CONTRIBUTING.md with project overview and contribution guidelines",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "documentation",
+          "phase7"
+        ],
+        "dependencies": [
+          "task-044"
+        ],
+        "estimated_hours": 4,
+        "deliverables": [
+          "README.md",
+          "CONTRIBUTING.md"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-049",
+        "title": "Phase 8: Version Management and CHANGELOG",
+        "description": "Set version to v1.0.0, create comprehensive CHANGELOG, and tag release in Git",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "release",
+          "phase8"
+        ],
+        "dependencies": [
+          "task-042",
+          "task-048"
+        ],
+        "estimated_hours": 3,
+        "deliverables": [
+          "CHANGELOG.md",
+          "Git tag v1.0.0"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-050",
+        "title": "Phase 8: Build Multi-Platform Binaries",
+        "description": "Use goreleaser to build binaries for Linux, macOS, Windows (amd64 and arm64)",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "release",
+          "phase8",
+          "build"
+        ],
+        "dependencies": [
+          "task-049"
+        ],
+        "estimated_hours": 4,
+        "commands": [
+          "goreleaser release --clean"
+        ],
+        "acceptance_criteria": [
+          "Binaries built for all platforms",
+          "Checksums generated",
+          "Archives created"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-051",
+        "title": "Phase 8: Publish to Pulumi Registry",
+        "description": "Create Pulumi Registry listing with descriptions, tags, logo, and publish provider",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "release",
+          "phase8",
+          "registry"
+        ],
+        "dependencies": [
+          "task-050"
+        ],
+        "estimated_hours": 6,
+        "acceptance_criteria": [
+          "Provider listed in Pulumi Registry",
+          "Documentation linked",
+          "Logo and branding correct"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-052",
+        "title": "Phase 8: Publish SDKs to Package Managers",
+        "description": "Publish SDKs to: PyPI (Python), npm (TypeScript), NuGet (C#), Maven Central (Java)",
+        "status": "pending",
+        "priority": "critical",
+        "tags": [
+          "release",
+          "phase8",
+          "packages"
+        ],
+        "dependencies": [
+          "task-050"
+        ],
+        "estimated_hours": 8,
+        "acceptance_criteria": [
+          "Python package on PyPI",
+          "TypeScript package on npm",
+          "C# package on NuGet",
+          "Java package on Maven Central",
+          "All packages installable"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-053",
+        "title": "Phase 8: Create GitHub Release",
+        "description": "Create GitHub release with binaries, checksums, release notes, and documentation links",
+        "status": "pending",
+        "priority": "high",
+        "tags": [
+          "release",
+          "phase8",
+          "github"
+        ],
+        "dependencies": [
+          "task-050"
+        ],
+        "estimated_hours": 3,
+        "deliverables": [
+          "GitHub Release v1.0.0"
+        ],
+        "subtasks": []
+      },
+      {
+        "id": "task-054",
+        "title": "Phase 8: Write Release Announcement",
+        "description": "Create blog post, release notes, and community announcements",
+        "status": "pending",
+        "priority": "medium",
+        "tags": [
+          "release",
+          "phase8",
+          "communication"
+        ],
+        "dependencies": [
+          "task-051",
+          "task-052",
+          "task-053"
+        ],
+        "estimated_hours": 4,
+        "deliverables": [
+          "Blog post draft",
+          "Release announcement",
+          "Social media posts"
+        ],
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "lastModified": "2025-10-05T21:41:28.973Z",
+      "taskCount": 54,
+      "completedCount": 1,
+      "tags": [
+        "master"
+      ]
+    }
+  }
+}

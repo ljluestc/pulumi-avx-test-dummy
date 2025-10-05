@@ -1,0 +1,11 @@
+# Task ID: task-034
+# Title: Phase 5: Create Python Example Programs
+# Status: pending
+# Dependencies: task-029 (Not found)
+# Priority: high
+# Description: Write example Pulumi programs in Python for key resources
+# Details:
+
+
+# Test Strategy:
+

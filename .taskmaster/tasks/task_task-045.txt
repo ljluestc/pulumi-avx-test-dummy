@@ -1,0 +1,11 @@
+# Task ID: task-045
+# Title: Phase 7: Write Migration Guide from Terraform
+# Status: pending
+# Dependencies: task-043 (Not found)
+# Priority: high
+# Description: Create detailed migration guide: conversion steps, schema differences, state migration, common patterns
+# Details:
+
+
+# Test Strategy:
+

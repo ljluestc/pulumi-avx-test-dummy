@@ -1,0 +1,11 @@
+# Task ID: task-036
+# Title: Phase 5: Create C# Example Programs
+# Status: pending
+# Dependencies: task-031 (Not found)
+# Priority: medium
+# Description: Write example Pulumi programs in C# for key resources
+# Details:
+
+
+# Test Strategy:
+

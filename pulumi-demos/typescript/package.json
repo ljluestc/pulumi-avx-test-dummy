@@ -1,0 +1,17 @@
+{
+  "name": "aviatrix-typescript-demo",
+  "version": "1.0.0",
+  "description": "A Pulumi program demonstrating Aviatrix provider in TypeScript",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@pulumi/pulumi": "^3.100.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

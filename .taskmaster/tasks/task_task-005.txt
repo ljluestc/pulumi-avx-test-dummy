@@ -1,0 +1,11 @@
+# Task ID: task-005
+# Title: Phase 1: Setup GitHub Actions CI/CD
+# Status: pending
+# Dependencies: task-004 (Not found)
+# Priority: high
+# Description: Create GitHub Actions workflows for builds, tests, and releases (multi-platform: Linux, macOS, Windows)
+# Details:
+
+
+# Test Strategy:
+

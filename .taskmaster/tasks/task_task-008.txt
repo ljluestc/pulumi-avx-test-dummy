@@ -1,0 +1,11 @@
+# Task ID: task-008
+# Title: Phase 2: Implement Provider Configuration Schema
+# Status: pending
+# Dependencies: task-007 (Not found)
+# Priority: critical
+# Description: Map Terraform provider config to Pulumi: ControllerIP, Username, Password, SSL settings, IgnoreTags
+# Details:
+
+
+# Test Strategy:
+

@@ -1,0 +1,50 @@
+repos:
+  - repo: local
+    hooks:
+      - id: pulumi-aviatrix-demo-go
+        name: Pulumi Aviatrix Demo - Go
+        entry: bash -c 'cd /root/GolandProjects/pulumi-avx-test-dummy && go run demo_go.go'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+        
+      - id: pulumi-aviatrix-demo-python
+        name: Pulumi Aviatrix Demo - Python
+        entry: bash -c 'cd /root/GolandProjects/pulumi-avx-test-dummy && python3 demo_python.py'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+        
+      - id: pulumi-aviatrix-demo-csharp
+        name: Pulumi Aviatrix Demo - C#
+        entry: bash -c 'cd /root/GolandProjects/pulumi-avx-test-dummy && dotnet run --project . -- demo_csharp.cs'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+        
+      - id: pulumi-aviatrix-demo-java
+        name: Pulumi Aviatrix Demo - Java
+        entry: bash -c 'cd /root/GolandProjects/pulumi-avx-test-dummy && javac demo_java.java && java DemoJava'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+        
+      - id: pulumi-aviatrix-demo-typescript
+        name: Pulumi Aviatrix Demo - TypeScript
+        entry: bash -c 'cd /root/GolandProjects/pulumi-avx-test-dummy && node demo_typescript.js'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+        
+      - id: pulumi-aviatrix-comprehensive-test
+        name: Pulumi Aviatrix Comprehensive Test
+        entry: bash -c 'cd /root/GolandProjects/pulumi-avx-test-dummy && ./test_final.sh'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]

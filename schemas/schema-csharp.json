@@ -1,0 +1,3798 @@
+{
+  "dataSources": {
+    "aviatrix:index:getAccount": {
+      "description": "Aviatrix Account data source",
+      "properties": {
+        "accountName": {
+          "description": "Account name to filter by",
+          "type": "string"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getCallerIdentity": {
+      "description": "Aviatrix CallerIdentity data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getControllerMetadata": {
+      "description": "Aviatrix ControllerMetadata data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getDcfMwpAttachmentPoint": {
+      "description": "Aviatrix DcfMwpAttachmentPoint data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getDeviceInterfaces": {
+      "description": "Aviatrix DeviceInterfaces data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getEdgeGatewayWanInterfaceDiscovery": {
+      "description": "Aviatrix EdgeGatewayWanInterfaceDiscovery data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getFireNet": {
+      "description": "Aviatrix FireNet data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getFireNetFirewallManager": {
+      "description": "Aviatrix FireNetFirewallManager data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getFireNetVendorIntegration": {
+      "description": "Aviatrix FireNetVendorIntegration data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getFirewall": {
+      "description": "Aviatrix Firewall data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getFirewallInstanceImages": {
+      "description": "Aviatrix FirewallInstanceImages data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getGateway": {
+      "description": "Aviatrix Gateway data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Gateway name to filter by",
+          "type": "string"
+        },
+        "vpcId": {
+          "description": "VPC ID to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getGatewayImage": {
+      "description": "Aviatrix GatewayImage data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getNetworkDomains": {
+      "description": "Aviatrix NetworkDomains data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getSmartGroups": {
+      "description": "Aviatrix SmartGroups data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getSpokeGateway": {
+      "description": "Aviatrix SpokeGateway data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getSpokeGatewayInspectionSubnets": {
+      "description": "Aviatrix SpokeGatewayInspectionSubnets data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getSpokeGateways": {
+      "description": "Aviatrix SpokeGateways data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getTransitGateway": {
+      "description": "Aviatrix TransitGateway data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getTransitGateways": {
+      "description": "Aviatrix TransitGateways data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getVpc": {
+      "description": "Aviatrix Vpc data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "VPC name to filter by",
+          "type": "string"
+        },
+        "region": {
+          "description": "Region to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getVpcTracker": {
+      "description": "Aviatrix VpcTracker data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "aviatrix:index:getWebGroup": {
+      "description": "Aviatrix WebGroup data source",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to filter by",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "functions": {},
+  "language": {
+    "csharp": {
+      "namespaces": {
+        "aviatrix": "Pulumi.Aviatrix"
+      },
+      "packageReferences": {
+        "Pulumi": "3.*"
+      }
+    }
+  },
+  "name": "aviatrix",
+  "provider": {
+    "properties": {
+      "controller_ip": {
+        "description": "Aviatrix Controller IP address",
+        "type": "string"
+      },
+      "password": {
+        "description": "Aviatrix Controller password",
+        "type": "string"
+      },
+      "path_to_ca_certificate": {
+        "description": "Path to CA certificate",
+        "type": "string"
+      },
+      "skip_version_validation": {
+        "default": false,
+        "description": "Skip version validation",
+        "type": "boolean"
+      },
+      "username": {
+        "description": "Aviatrix Controller username",
+        "type": "string"
+      },
+      "verify_ssl_certificate": {
+        "default": false,
+        "description": "Verify SSL certificate",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "controller_ip",
+      "username",
+      "password"
+    ],
+    "type": "object"
+  },
+  "resources": {
+    "aviatrix:index:Account": {
+      "description": "Aviatrix Account resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "awsAccountNumber": {
+          "description": "AWS account number",
+          "type": "string"
+        },
+        "awsIamRole": {
+          "description": "AWS IAM role ARN",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "accountName",
+        "cloudType"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AccountUser": {
+      "description": "Aviatrix AccountUser resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsGuardDuty": {
+      "description": "Aviatrix AwsGuardDuty resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsPeer": {
+      "description": "Aviatrix AwsPeer resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgw": {
+      "description": "Aviatrix AwsTgw resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwConnect": {
+      "description": "Aviatrix AwsTgwConnect resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwConnectPeer": {
+      "description": "Aviatrix AwsTgwConnectPeer resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwDirectConnect": {
+      "description": "Aviatrix AwsTgwDirectConnect resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwIntraDomainInspection": {
+      "description": "Aviatrix AwsTgwIntraDomainInspection resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwNetworkDomain": {
+      "description": "Aviatrix AwsTgwNetworkDomain resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwPeering": {
+      "description": "Aviatrix AwsTgwPeering resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwPeeringDomainConn": {
+      "description": "Aviatrix AwsTgwPeeringDomainConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwTransitGatewayAttachment": {
+      "description": "Aviatrix AwsTgwTransitGatewayAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwVpcAttachment": {
+      "description": "Aviatrix AwsTgwVpcAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AwsTgwVpnConn": {
+      "description": "Aviatrix AwsTgwVpnConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AzurePeer": {
+      "description": "Aviatrix AzurePeer resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AzureSpokeNativePeering": {
+      "description": "Aviatrix AzureSpokeNativePeering resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:AzureVngConn": {
+      "description": "Aviatrix AzureVngConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:CentralizedTransitFireNet": {
+      "description": "Aviatrix CentralizedTransitFireNet resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:CloudwatchAgent": {
+      "description": "Aviatrix CloudwatchAgent resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerAccessAllowListConfig": {
+      "description": "Aviatrix ControllerAccessAllowListConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerBgpCommunitiesAutoCloudConfig": {
+      "description": "Aviatrix ControllerBgpCommunitiesAutoCloudConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerBgpCommunitiesGlobalConfig": {
+      "description": "Aviatrix ControllerBgpCommunitiesGlobalConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerBgpMaxAsLimitConfig": {
+      "description": "Aviatrix ControllerBgpMaxAsLimitConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerCertDomainConfig": {
+      "description": "Aviatrix ControllerCertDomainConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerConfig": {
+      "description": "Aviatrix ControllerConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerEmailConfig": {
+      "description": "Aviatrix ControllerEmailConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerEmailExceptionNotificationConfig": {
+      "description": "Aviatrix ControllerEmailExceptionNotificationConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerGatewayKeepaliveConfig": {
+      "description": "Aviatrix ControllerGatewayKeepaliveConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerPrivateModeConfig": {
+      "description": "Aviatrix ControllerPrivateModeConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerPrivateOob": {
+      "description": "Aviatrix ControllerPrivateOob resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ControllerSecurityGroupManagementConfig": {
+      "description": "Aviatrix ControllerSecurityGroupManagementConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:CopilotAssociation": {
+      "description": "Aviatrix CopilotAssociation resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:CopilotFaultTolerantDeployment": {
+      "description": "Aviatrix CopilotFaultTolerantDeployment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:CopilotSecurityGroupManagementConfig": {
+      "description": "Aviatrix CopilotSecurityGroupManagementConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:CopilotSimpleDeployment": {
+      "description": "Aviatrix CopilotSimpleDeployment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DatadogAgent": {
+      "description": "Aviatrix DatadogAgent resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DcfMwpPolicyBlock": {
+      "description": "Aviatrix DcfMwpPolicyBlock resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DcfMwpPolicyList": {
+      "description": "Aviatrix DcfMwpPolicyList resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DeviceInterfaceConfig": {
+      "description": "Aviatrix DeviceInterfaceConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingConfig": {
+      "description": "Aviatrix DistributedFirewallingConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingDefaultActionRule": {
+      "description": "Aviatrix DistributedFirewallingDefaultActionRule resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingDeploymentPolicy": {
+      "description": "Aviatrix DistributedFirewallingDeploymentPolicy resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingIntraVpc": {
+      "description": "Aviatrix DistributedFirewallingIntraVpc resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingOriginCertEnforcementConfig": {
+      "description": "Aviatrix DistributedFirewallingOriginCertEnforcementConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingPolicyList": {
+      "description": "Aviatrix DistributedFirewallingPolicyList resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:DistributedFirewallingProxyCaConfig": {
+      "description": "Aviatrix DistributedFirewallingProxyCaConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeCsp": {
+      "description": "Aviatrix EdgeCsp resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeCspHa": {
+      "description": "Aviatrix EdgeCspHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeEquinix": {
+      "description": "Aviatrix EdgeEquinix resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeEquinixHa": {
+      "description": "Aviatrix EdgeEquinixHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeGateway": {
+      "description": "Aviatrix EdgeGateway resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeGatewaySelfmanaged": {
+      "description": "Aviatrix EdgeGatewaySelfmanaged resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeGatewaySelfmanagedHa": {
+      "description": "Aviatrix EdgeGatewaySelfmanagedHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeMegaport": {
+      "description": "Aviatrix EdgeMegaport resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeMegaportHa": {
+      "description": "Aviatrix EdgeMegaportHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeNeo": {
+      "description": "Aviatrix EdgeNeo resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeNeoDeviceOnboarding": {
+      "description": "Aviatrix EdgeNeoDeviceOnboarding resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeNeoHa": {
+      "description": "Aviatrix EdgeNeoHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgePlatform": {
+      "description": "Aviatrix EdgePlatform resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgePlatformDeviceOnboarding": {
+      "description": "Aviatrix EdgePlatformDeviceOnboarding resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgePlatformHa": {
+      "description": "Aviatrix EdgePlatformHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeProxyProfile": {
+      "description": "Aviatrix EdgeProxyProfile resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeSpoke": {
+      "description": "Aviatrix EdgeSpoke resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeSpokeExternalDeviceConn": {
+      "description": "Aviatrix EdgeSpokeExternalDeviceConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeSpokeTransitAttachment": {
+      "description": "Aviatrix EdgeSpokeTransitAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeVmSelfmanaged": {
+      "description": "Aviatrix EdgeVmSelfmanaged resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeVmSelfmanagedHa": {
+      "description": "Aviatrix EdgeVmSelfmanagedHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeZededa": {
+      "description": "Aviatrix EdgeZededa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:EdgeZededaHa": {
+      "description": "Aviatrix EdgeZededaHa resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FilebeatForwarder": {
+      "description": "Aviatrix FilebeatForwarder resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FireNet": {
+      "description": "Aviatrix FireNet resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:Firewall": {
+      "description": "Aviatrix Firewall resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FirewallInstance": {
+      "description": "Aviatrix FirewallInstance resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FirewallInstanceAssociation": {
+      "description": "Aviatrix FirewallInstanceAssociation resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FirewallManagementAccess": {
+      "description": "Aviatrix FirewallManagementAccess resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FirewallPolicy": {
+      "description": "Aviatrix FirewallPolicy resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FirewallTag": {
+      "description": "Aviatrix FirewallTag resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:Fqdn": {
+      "description": "Aviatrix Fqdn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FqdnGlobalConfig": {
+      "description": "Aviatrix FqdnGlobalConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FqdnPassThrough": {
+      "description": "Aviatrix FqdnPassThrough resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:FqdnTagRule": {
+      "description": "Aviatrix FqdnTagRule resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:Gateway": {
+      "description": "Aviatrix Gateway resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        },
+        "subnet": {
+          "description": "Subnet CIDR",
+          "type": "string"
+        },
+        "vpcId": {
+          "description": "VPC ID",
+          "type": "string"
+        },
+        "vpcRegion": {
+          "description": "VPC region",
+          "type": "string"
+        },
+        "vpcSize": {
+          "description": "Gateway size",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "cloudType",
+        "accountName",
+        "vpcId",
+        "vpcRegion",
+        "vpcSize",
+        "subnet"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:GatewayCertificateConfig": {
+      "description": "Aviatrix GatewayCertificateConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:GatewayDNat": {
+      "description": "Aviatrix GatewayDNat resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:GatewaySNat": {
+      "description": "Aviatrix GatewaySNat resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:GeoVpn": {
+      "description": "Aviatrix GeoVpn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:GlobalVpcExcludedInstance": {
+      "description": "Aviatrix GlobalVpcExcludedInstance resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:GlobalVpcTaggingSettings": {
+      "description": "Aviatrix GlobalVpcTaggingSettings resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:KubernetesCluster": {
+      "description": "Aviatrix KubernetesCluster resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:LinkHierarchy": {
+      "description": "Aviatrix LinkHierarchy resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:NetflowAgent": {
+      "description": "Aviatrix NetflowAgent resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:PeriodicPing": {
+      "description": "Aviatrix PeriodicPing resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:PrivateModeLb": {
+      "description": "Aviatrix PrivateModeLb resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:PrivateModeMulticloudEndpoint": {
+      "description": "Aviatrix PrivateModeMulticloudEndpoint resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:ProxyConfig": {
+      "description": "Aviatrix ProxyConfig resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:QosClass": {
+      "description": "Aviatrix QosClass resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:QosPolicyList": {
+      "description": "Aviatrix QosPolicyList resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RbacGroup": {
+      "description": "Aviatrix RbacGroup resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RbacGroupAccessAccountAttachment": {
+      "description": "Aviatrix RbacGroupAccessAccountAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RbacGroupAccessAccountMembership": {
+      "description": "Aviatrix RbacGroupAccessAccountMembership resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RbacGroupPermissionAttachment": {
+      "description": "Aviatrix RbacGroupPermissionAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RbacGroupUserAttachment": {
+      "description": "Aviatrix RbacGroupUserAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RbacGroupUserMembership": {
+      "description": "Aviatrix RbacGroupUserMembership resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:RemoteSyslog": {
+      "description": "Aviatrix RemoteSyslog resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SamlEndpoint": {
+      "description": "Aviatrix SamlEndpoint resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SegmentationNetworkDomain": {
+      "description": "Aviatrix SegmentationNetworkDomain resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SegmentationNetworkDomainAssociation": {
+      "description": "Aviatrix SegmentationNetworkDomainAssociation resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SegmentationNetworkDomainConnectionPolicy": {
+      "description": "Aviatrix SegmentationNetworkDomainConnectionPolicy resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:Site2Cloud": {
+      "description": "Aviatrix Site2Cloud resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SlaClass": {
+      "description": "Aviatrix SlaClass resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SmartGroup": {
+      "description": "Aviatrix SmartGroup resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SplunkLogging": {
+      "description": "Aviatrix SplunkLogging resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SpokeExternalDeviceConn": {
+      "description": "Aviatrix SpokeExternalDeviceConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SpokeGateway": {
+      "description": "Aviatrix SpokeGateway resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        },
+        "subnet": {
+          "description": "Subnet CIDR",
+          "type": "string"
+        },
+        "vpcId": {
+          "description": "VPC ID",
+          "type": "string"
+        },
+        "vpcRegion": {
+          "description": "VPC region",
+          "type": "string"
+        },
+        "vpcSize": {
+          "description": "Gateway size",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "cloudType",
+        "accountName",
+        "vpcId",
+        "vpcRegion",
+        "vpcSize",
+        "subnet"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SpokeGatewaySubnetGroup": {
+      "description": "Aviatrix SpokeGatewaySubnetGroup resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SpokeHaGateway": {
+      "description": "Aviatrix SpokeHaGateway resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SpokeTransitAttachment": {
+      "description": "Aviatrix SpokeTransitAttachment resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:SumologicForwarder": {
+      "description": "Aviatrix SumologicForwarder resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:TrafficClassifier": {
+      "description": "Aviatrix TrafficClassifier resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:TransPeer": {
+      "description": "Aviatrix TransPeer resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:TransitExternalDeviceConn": {
+      "description": "Aviatrix TransitExternalDeviceConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:TransitFireNetPolicy": {
+      "description": "Aviatrix TransitFireNetPolicy resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:TransitGateway": {
+      "description": "Aviatrix TransitGateway resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        },
+        "subnet": {
+          "description": "Subnet CIDR",
+          "type": "string"
+        },
+        "vpcId": {
+          "description": "VPC ID",
+          "type": "string"
+        },
+        "vpcRegion": {
+          "description": "VPC region",
+          "type": "string"
+        },
+        "vpcSize": {
+          "description": "Gateway size",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "cloudType",
+        "accountName",
+        "vpcId",
+        "vpcRegion",
+        "vpcSize",
+        "subnet"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:TransitGatewayPeering": {
+      "description": "Aviatrix TransitGatewayPeering resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:Tunnel": {
+      "description": "Aviatrix Tunnel resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:VgwConn": {
+      "description": "Aviatrix VgwConn resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:Vpc": {
+      "description": "Aviatrix Vpc resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        },
+        "region": {
+          "description": "Cloud region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "cloudType",
+        "accountName",
+        "region"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:VpnCertDownload": {
+      "description": "Aviatrix VpnCertDownload resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:VpnProfile": {
+      "description": "Aviatrix VpnProfile resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:VpnUser": {
+      "description": "Aviatrix VpnUser resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:VpnUserAccelerator": {
+      "description": "Aviatrix VpnUserAccelerator resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "aviatrix:index:WebGroup": {
+      "description": "Aviatrix WebGroup resource",
+      "properties": {
+        "accountName": {
+          "description": "Account name",
+          "type": "string"
+        },
+        "cloudType": {
+          "description": "Cloud type (1=AWS, 4=GCP, 8=Azure)",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    }
+  },
+  "server": {
+    "grpc": {
+      "address": "localhost:0"
+    }
+  },
+  "types": {},
+  "version": "0.0.1"
+}

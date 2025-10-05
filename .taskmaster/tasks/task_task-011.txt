@@ -1,0 +1,11 @@
+# Task ID: task-011
+# Title: Phase 3 Batch 1: Account Management Resources (9 resources)
+# Status: pending
+# Dependencies: task-010 (Not found)
+# Priority: critical
+# Description: Implement: account, account_user, rbac_group, rbac_group_access_account_attachment, rbac_group_permission_attachment, rbac_group_user_attachment, remote_syslog, sumologic_forwarder, splunk_logging
+# Details:
+
+
+# Test Strategy:
+

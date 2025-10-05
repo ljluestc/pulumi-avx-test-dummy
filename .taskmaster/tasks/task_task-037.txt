@@ -1,0 +1,11 @@
+# Task ID: task-037
+# Title: Phase 5: Create Java Example Programs
+# Status: pending
+# Dependencies: task-032 (Not found)
+# Priority: medium
+# Description: Write example Pulumi programs in Java for key resources
+# Details:
+
+
+# Test Strategy:
+
