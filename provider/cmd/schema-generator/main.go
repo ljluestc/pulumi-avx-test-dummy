@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	aviatrix "github.com/pulumi/pulumi-aviatrix/provider"
+	aviatrix "github.com/AviatrixSystems/pulumi-avx-test-dummy/provider"
 )
 
 func main() {

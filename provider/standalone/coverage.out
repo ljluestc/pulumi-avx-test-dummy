@@ -1,0 +1,17 @@
+mode: set
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:17.50,182.2 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:185.63,187.2 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:190.65,192.2 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:195.53,197.2 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:200.55,202.2 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:205.82,207.33 2 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:207.33,208.42 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:208.42,210.4 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:212.2,212.12 1 1
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:216.42,224.36 8 0
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:224.36,225.17 1 0
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:225.17,228.4 2 0
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:230.2,232.42 3 0
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:235.13,236.22 1 0
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:236.22,240.3 3 0
+github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/standalone/main.go:243.2,244.12 2 0

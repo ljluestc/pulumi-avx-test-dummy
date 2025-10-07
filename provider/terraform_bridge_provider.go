@@ -4,7 +4,7 @@ import (
 	"github.com/AviatrixSystems/terraform-provider-aviatrix/v3/aviatrix"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/pulumi/pulumi-aviatrix/provider/pkg/version"
+	"github.com/AviatrixSystems/pulumi-avx-test-dummy/provider/pkg/version"
 )
 
 const (
